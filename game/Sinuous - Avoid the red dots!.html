@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)http://www.sinuousgame.com/ -->
+<html lang="en" manifest="http://www.sinuousgame.com/cache.manifest"><script type="text/javascript" async="" src="./Sinuous - Avoid the red dots!_files/ga.js"></script><script id="tinyhippos-injected">if (window.top.ripple) { window.top.ripple("bootstrap").inject(window, document); }</script><!--
+	    @author Hakim El Hattab | (http://hakim.se/)
+	    @version 1.0
+	 --><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+
+		<meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+		<meta name="description" content="A free game where your goal is to dodge red enemies, stay alive for as long as possible and gain high scores. Sounds simple, eh? If only... Give it a try!">
+		<meta name="keywords" content="html5, game, sinuous, hakim, elhattab, hakim el hattab, hakim elhattab, interactive, developer, flash, html5, canvas, web, experiments">
+		<meta name="author" content="Hakim El Hattab">
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <meta name="viewport" content="width = 450">
+
+	    <meta property="og:image" content="http://www.sinuousgame.com/assets/images/icon_512.png">
+
+        <title>Sinuous - Avoid the red dots!</title>
+
+		<script type="text/javascript">
+			if( navigator.userAgent.match( /iphone|ipad|ipod/gi ) ) window.location = '/mobile';
+
+			var sc = 2836;
+
+			var FACEBOOK_MODE = false;
+		</script>
+
+		<link type="text/css" href="./Sinuous - Avoid the red dots!_files/reset.css" rel="stylesheet" media="screen">
+		<link type="text/css" href="./Sinuous - Avoid the red dots!_files/main.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" charset="utf-8" async="" src="./Sinuous - Avoid the red dots!_files/button.1813ea3f78757294e1ba1cea21b068a0.js"></script></head>
+    <body>
+
+    	<header style="display: none;">
+    		<h1>Sinuous</h1>
+    		<span class="header-instruction">Expand for instructions &amp; settings.</span>
+
+    		<!-- The extra content that can be expanded -->
+    		<div class="extra">
+
+    			<!-- About the game in general -->
+    			<section id="about">
+    				<h3>About</h3>
+	    			<p>A game with a single objective: avoid colliding with the red dots.<br>You can activate a boosts by picking up the rare green dots.</p>
+	    			<p>Sounds simple, eh? If only... Give it a try!</p>
+	    			<p class="credits">
+	    				Created by <a href="http://hakim.se/">Hakim El Hattab</a> | <a href="http://twitter.com/hakimel">@hakimel</a><br>
+	    				Sound design by <a href="http://plan8.se/">Plan8</a>
+    				</p>
+	    		</section>
+
+    			<!-- Legend that defines the boost types -->
+    			<section id="legend">
+    				<h3>Legend</h3>
+	    			<ul>
+	    				<li class="shield"><span deluminate_imagetype="png">S</span> Shield</li>
+	    				<li class="gravity-field"><span deluminate_imagetype="png">G</span> Gravity Field</li>
+	    				<li class="time-warp"><span deluminate_imagetype="png">T</span> Time Warp</li>
+	    				<li class="minimize-dots"><span deluminate_imagetype="png">M</span> Minimize Dots</li>
+	    			</ul>
+	    			<ul>
+	    				<li class="life-up"><span deluminate_imagetype="png">1</span> Life Up</li>
+	    				<li class="player"><span deluminate_imagetype="png"></span> Player</li>
+	    				<li class="enemy"><span deluminate_imagetype="png"></span> Enemy</li>
+	    			</ul>
+	    		</section>
+
+	    		<!-- Gameplay and surrounding settings -->
+	    		<section id="settings">
+	    			<h3>Settings</h3>
+	    			<ul>
+	    				<li><a id="mute-button" href="http://www.sinuousgame.com/#">Turn audio off</a></li>
+	    				<li><a id="reset-button" href="http://www.sinuousgame.com/#">Reset game</a></li>
+	    			</ul>
+	    		</section>
+
+	    		<!-- Affiliate logos, badges and other promotion -->
+	    		<section id="affiliation">
+	    			<a href="http://www.w3.org/html/logo/" target="_blank" title="W3C HTML5 Logo"><img src="./Sinuous - Avoid the red dots!_files/HTML5_Logo_64_WhiteText.png"></a>
+	    		</section>
+	    		<!-- Affiliate logos, badges and other promotion -->
+	    		<section id="affiliation">
+	    			<a href="http://www.w3.org/html/logo/" target="_blank" title="W3C HTML5 Logo"><img src="./Sinuous - Avoid the red dots!_files/HTML5_Logo_64_WhiteText.png"></a>
+	    		</section>
+
+    		</div>
+
+    		<!-- Different methods for sharing the game -->
+    		<div id="share">
+    			<iframe id="facebook-button" src="./Sinuous - Avoid the red dots!_files/like.html" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:80px; height:21px;" allowtransparency="true"></iframe>
+				<div id="retweet-button">
+					<iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" title="Twitter Tweet Button" src="./Sinuous - Avoid the red dots!_files/tweet_button.a9003d9964444592507bbb36b98c709b.en.html" style="position: static; visibility: visible; width: 60px; height: 20px;" data-url="http://sinuousgame.com/"></iframe>
+				</div>
+    			<script type="text/javascript" src="./Sinuous - Avoid the red dots!_files/widgets.js"></script>
+    		</div>
+    	</header>
+
+    	<!-- Wraps all game elements including UI panels and the canvas the game is rendered on -->
+    	<div id="game">
+
+	    	<!-- Displays status information (score, time, fps) about the current game -->
+	    	<div id="game-status" class="ui" style="left: 6px; top: 6px; display: block;">Level: <span>1</span> Score: <span>68</span> Time: <span>4.86s</span></div>
+
+	    	<!-- Holds the main game UI such as high score lists and instructions -->
+			<div id="game-panels" style="left: 6px; top: 150px; display: block;">
+				<div id="message" class="ui">
+					<h2 id="title">Game Over! (68 points)</h2>
+					<ul class="instructions">
+						<li>1. Avoid red dots.</li>
+						<li>2. Hit other dots for boosts.</li>
+						<li>3. Score extra points by moving around a lot.</li>
+						<li>4. Stay alive.</li>
+					</ul>
+					<a href="http://www.sinuousgame.com/#" id="start-button">Start</a>
+					<div id="level-selector">
+						<span>Level:</span>
+						<ul class="levels"><li data-level="1" class="selected">1</li><li data-level="2" class="unlocked">2</li><li data-level="3" class="unlocked">3</li><li data-level="4" class="unlocked">4</li><li data-level="5" class="locked">5</li><li data-level="6" class="locked">6</li><li data-level="7" class="locked">7</li><li data-level="8" class="locked">8</li><li data-level="9" class="locked">9</li></ul>
+					</div>
+				</div>
+				<div id="highscore-list" class="ui">
+					<h2>High Score</h2>
+					<ul id="highscore-output"></ul>
+					<!-- Auth markup is injected via JS here -->
+				<p class="auth out">You need to <a href="http://www.sinuousgame.com/php/login.php">sign in</a> with a Google account to be eligible for the leaderboard.</p></div>
+				<div id="highscore-win" class="ui" style="display: none;">
+					<h2 id="highscore-place"></h2>
+					<p>Something to identify you by</p>
+					<input id="highscore-input" type="text" name="alias" maxlength="10">
+					<a id="highscore-submit" href="http://www.sinuousgame.com/#">Go</a>
+				</div>
+			</div>
+
+
+			<canvas id="world" width="1000" height="600" style="display: block;"></canvas>
+
+		</div>
+
+
+
+		<script src="./Sinuous - Avoid the red dots!_files/jquery.min.js"></script>
+		<script>!window.jQuery && document.write(unescape('%3Cscript src="../js/libs/jquery-1.5.2.min.js"%3E%3C/script%3E'))</script>
+
+		<script type="text/javascript" src="./Sinuous - Avoid the red dots!_files/swfobject.js"></script>
+		<script type="text/javascript" src="./Sinuous - Avoid the red dots!_files/sinuous.min.js"></script>
+
+		<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-19474037-1']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>
+    
+
+
+
+<object type="application/x-shockwave-flash" id="soundSWF" data="./Sinuous - Avoid the red dots!_files/sound.swf" width="1" height="1" style="display: block;"><param name="allowScriptAccess" value="always"></object><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" src="./Sinuous - Avoid the red dots!_files/saved_resource.html"></iframe></body></html>
