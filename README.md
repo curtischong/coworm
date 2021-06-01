@@ -1,7 +1,7 @@
 # coworm
 
 <p align="center">
-  <img src="https://chongcurtis.com/photos/header_coworm.jpg" alt="A photo of the controlled character" style="height: 300px;"/>
+  <img src="demo.jpeg" alt="A photo of the controlled character" style="height: 300px;"/>
 </p>
 
 
